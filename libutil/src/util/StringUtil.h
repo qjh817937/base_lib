@@ -8,7 +8,7 @@ UTIL_BEGIN_NAMESPACE(util)
 
 class StringUtil {
 public:
-    void trim(std::string& str);
+    static void trim(std::string& str);
 };
 
 UTIL_END_NAMESPACE(autil)

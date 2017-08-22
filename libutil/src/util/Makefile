@@ -1,9 +1,11 @@
 
-libutil.so: StringUtil.o
+target=../../lib/libmutil.so
+
+$(target): StringUtil.o
 	gcc -fpic -shared -o $@ $^
 
 .cpp.o:
-	gcc -fpic -c $< -I../
+	gcc -fpic -g -c $< -I../
 
 clean:
-	rm -f *.o *.so
+	rm -f *.o $(target)
